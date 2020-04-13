@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vocales</title>
+</head>
+
+<body>
+
+    <script>
+        function vocales(str) {
+            var allVocal = "aeiouAEIOU";
+            var count = 0;
+            for (let i = 0; i < str.length; i++) {
+                if (allVocal.indexOf(str[i]) !== -1) {
+                    document.write("Las vocales en la palabra son: " + str[i] + "<br> ");
+                    count++;
+                }
+            }
+
+            document.write(`La palabra original es ${str} <br>`);
+            document.write(`El texto tiene ${count} vocales`);
+            return count;
+        }
+
+        console.log(vocales(prompt("Ingrese una palabra")));
+    </script>
+
+</body>
+
+</html>

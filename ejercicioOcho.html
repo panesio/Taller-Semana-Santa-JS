@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Figuras</title>
+</head>
+
+<body>
+
+    <button onclick="figUno()">Figura Uno</button>
+    <button onclick="figDos()">Figura Dos</button>
+    <button onclick="figTres()">Figura Tres</button>
+
+
+
+    <script>
+        function figUno() {
+            let x = "";
+            for (let i = 1; i <= 9; i++) {
+                x += "*";
+                console.log(x);
+                if (x[i] % 2 == 0) {
+                    x.innetHtml(" ")
+                }
+            }
+        }
+
+
+
+        function figDos() {
+            let x = "";
+            for (let i = 9; i <= 1; i--) {
+                x -= "*";
+                console.log(x);
+            }
+        }
+
+        function figTres() {
+            var num = Number(prompt("Ingrese un número"));
+            let x = "";
+            for (let i = 1; i <= num; i++) {
+                x += "*";
+                console.log(x);
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CalculoEdad</title>
+</head>
+
+<body>
+
+    <script>
+        let edades = Number(prompt("Ingrese la cantidad de edades que desee ingresar"));
+        let contenido = [edades];
+        let otro = parseInt(contenido);
+
+
+
+        if (edades != "") {
+            for (i = 0; i < edades; i++) {
+                contenido[i] = Number(prompt(`Ingrese el numero ${i + 1} de ${edades}`));
+            }
+
+
+        } else {
+            alert("No hay edades");
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Números múltiplos</title>
+</head>
+
+<body>
+
+    <script>
+        function multiplo(valor, multi) {
+            result = valor % multi;
+            if (result == 0)
+                return true;
+            else
+                return false;
+        }
+
+        function mult() {
+            var max = 499;
+            for (var i = 8; i <= max; i++) {
+
+                if (multiplo(i, 8)) {
+                    document.write(i, " es multiplo <br>");
+                } else {
+                    document.write(i, " no es multiplo <br>");
+                }
+            }
+            if (multiplo(500, 8)) {
+                document.write("500 es multiplo de 8");
+            } else {
+                document.write("Lo sentimos, no existe un número 500 que sea múltiplo de 8");
+            }
+        }
+
+        mult();
+    </script>
+</body>
+
+</html>

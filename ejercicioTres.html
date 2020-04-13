@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cronometro Chido</title>
+    <style>
+        span {
+            border: black 1px solid;
+            font-size: 60px;
+            text-align: center;
+        }
+        
+        button {
+            margin-top: 50px;
+            font-size: 30px;
+            color: green;
+        }
+        
+        div {
+            margin: 50px 500px;
+        }
+    </style>
+</head>
+
+<body onload="myFunction()">
+
+    <div>
+        <span id="minutos">00</span>:<span id="segundos">0</span><br>
+        <button onclick="stop()">Detener</button><br>
+    </div>
+
+
+
+
+    <script>
+        var global;
+
+        function myFunction() {
+            var contSegundos = 0;
+            var contMinutos = 0;
+            segundos = document.getElementById("segundos");
+            minutos = document.getElementById("minutos");
+            global = setInterval(function() {
+                if (contSegundos == 60) {
+                    contSegundos = 0;
+                    contMinutos++;
+                    minutos.innerHTML = contMinutos;
+                    if (contMinutos == 0) {
+                        contMinutos = 0
+                    }
+                }
+                segundos.innerHTML = contSegundos;
+                contSegundos++;
+
+            }, 1000)
+        }
+
+        function stop() {
+            alert("Tiempo!")
+            clearInterval(global)
+        }
+
+        //Boton para continuar el intervalo en proceso :D
+    </script>
+</body>
+
+</html>
